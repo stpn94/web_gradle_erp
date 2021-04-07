@@ -9,7 +9,7 @@ public class JdbcUtil {
 		Connection con = null;
 		try {
 			String url = "jdbc:mysql://localhost:3306/web_gradle_erp?useSSL=false";
-			String id = "web_gradle_erp";
+			String id = "user_gradle_erp";
 			String passwd = "rootroot";
 			con = DriverManager.getConnection(url, id, passwd);
 		} catch (SQLException e) {

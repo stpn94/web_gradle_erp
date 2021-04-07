@@ -7,6 +7,7 @@ package web_gradle_erp.dao;
  * D(delete)
  */
 
+import java.sql.Connection;
 import java.util.List;
 
 import web_gradle_erp.dto.Title;
@@ -21,5 +22,6 @@ public interface TitleDao {
 	int updateTitle(Title title);
 
 	int deleteTitle(Title title); // 기본타입
+
 
 }
