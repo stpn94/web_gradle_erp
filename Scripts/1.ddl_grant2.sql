@@ -4,19 +4,6 @@ DROP SCHEMA IF EXISTS web_gradle_erp;
 -- 내 스키마
 CREATE SCHEMA web_gradle_erp;
 
--- 직책
-CREATE TABLE web_gradle_erp.Title (
-   titleNo   INT         NOT NULL COMMENT '직책코드', -- 직책코드
-   titleName VARCHAR(20) NOT NULL COMMENT '직책명' -- 직책명
-)
-COMMENT '직책';
-
--- 직책
-ALTER TABLE web_gradle_erp.Title
-   ADD CONSTRAINT PK_Title -- 직책 기본키
-      PRIMARY KEY (
-         titleNo -- 직책코드
-      );
 
 -- 부서
 CREATE TABLE web_gradle_erp.department (
@@ -53,15 +40,6 @@ ALTER TABLE web_gradle_erp.employee
          empno -- 사원번호
       );
 
--- 사원
-ALTER TABLE web_gradle_erp.employee
-   ADD CONSTRAINT FK_Title_TO_employee -- 직책 -> 사원
-      FOREIGN KEY (
-         title -- 직책
-      )
-      REFERENCES web_gradle_erp.Title ( -- 직책
-         titleNo -- 직책코드
-      );
 
 -- 사원
 ALTER TABLE web_gradle_erp.employee
